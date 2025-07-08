@@ -20,6 +20,7 @@ const ProductCard = ({ product }) => {
   }, [product, selectedColor]);
 
   // Function to render star rating
+
   const renderStars = (score) => {
     if (!score || isNaN(parseFloat(score))) {
       console.warn("Invalid popularityScore:", score);
