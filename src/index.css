@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Avenir";
+  src: url("../fonts/Avenir-Book.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+
+/* Custom styles to ensure star and color picker rendering */
+.star-container {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 4px !important;
+}
+
+.star-container svg {
+  display: inline-block !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.color-picker-container {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: flex-start !important;
+  gap: 8px !important;
+}
+
+.color-picker-container .color-picker-button {
+  display: block !important;
+  min-width: 24px !important;
+  min-height: 24px !important;
+  border-radius: 50% !important;
+  box-sizing: border-box !important;
+}
+
+.color-picker-container .selected-color {
+  border: 1.5px solid black !important;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.8) !important;
+  z-index: 10 !important;
+}
+
+.color-picker-wrapper {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 4px !important;
+}
+
+/* Ensure card border is light gray and oval */
+.product-card-container {
+  border: 1px solid #e5e7eb !important; /* Tailwind's gray-200 */
+  border-radius: 24px !important; /* Matches rounded-3xl */
+}
+
+/* Style Swiper navigation buttons */
+.swiper-button-prev,
+.swiper-button-next {
+  color: black !important; /* Set arrow color to black */
+  background: none !important; /* Remove any background */
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.swiper-button-prev svg,
+.swiper-button-next svg {
+  fill: black !important; /* Ensure SVG arrow is black */
+}
