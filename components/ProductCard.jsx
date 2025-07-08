@@ -27,9 +27,10 @@ const ProductCard = ({ product }) => {
         <span className="font-avenir text-[14px]">Rating Unavailable</span>
       );
     }
-    const parsedScore = parseFloat(score);
-    const fullStars = Math.floor(parsedScore);
-    const hasHalfStar = parsedScore % 1 >= 0.5;
+
+    const scaledScore = parseFloat(score) * 5;
+    const fullStars = Math.floor(scaledScore);
+    const hasHalfStar = scaledScore % 1 >= 0.5;
     const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
 
     return (
