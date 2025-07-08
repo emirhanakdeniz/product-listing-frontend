@@ -1,10 +1,11 @@
 const express = require("express");
-const products = require(".products.json");
+const products = require("./products.json");
 
 const app = express();
 app.use(express.json());
 
-app.get(".products.json", (req, res) => {
+app.get("/api/products", (req, res) => {
+  console.log("Fetching products:", products); // Hata ayıklama için
   res.json(products);
 });
 
