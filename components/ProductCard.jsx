@@ -73,7 +73,7 @@ const ProductCard = ({ product }) => {
         {product.name || "Unnamed Product"}
       </h2>
       <p className="font-montserrat text-[15px] mb-2">
-        {product.price ? `$${product.price} USD` : "Price Unavailable"}
+        {product.price ? `$${product.price} USD` : "Will be updated soon.."}
       </p>
       <div className="flex justify-start gap-2 my-2 color-picker-container">
         {colors.map((color) => (
