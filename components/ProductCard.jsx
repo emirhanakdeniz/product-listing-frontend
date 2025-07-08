@@ -20,7 +20,6 @@ const ProductCard = ({ product }) => {
   }, [product, selectedColor]);
 
   // Function to render star rating
-
   const renderStars = (score) => {
     if (!score || isNaN(parseFloat(score))) {
       console.warn("Invalid popularityScore:", score);
@@ -104,7 +103,9 @@ const ProductCard = ({ product }) => {
       <div className="flex justify-center items-center gap-3">
         {renderStars(parseFloat(product.popularityScore))}
         <p className="font-avenir text-[14px]">
-          {product.popularityScore ? `${product.popularityScore}/5` : "N/A"}
+          {product.popularityScore
+            ? `${(parseFloat(product.popularityScore) * 5).toFixed(1)}/5`
+            : "N/A"}
         </p>
       </div>
     </div>
