@@ -4,7 +4,7 @@ const products = require("./products.json");
 const app = express();
 app.use(express.json());
 
-app.get("/api/products", (req, res) => {
+app.get("../api/products.json", (req, res) => {
   res.json(products);
 });
 
