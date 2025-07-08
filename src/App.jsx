@@ -11,7 +11,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("../api/products.json")
+      .get("/api/products")
       .then((response) => setProducts(response.data))
       .catch((error) => console.error("Error fetching products:", error));
   }, []);
@@ -25,18 +25,10 @@ function App() {
         slidesPerView={4}
         navigation
         breakpoints={{
-          0: {
-            slidesPerView: 1,
-          },
-          640: {
-            slidesPerView: 2,
-          },
-          768: {
-            slidesPerView: 3,
-          },
-          1024: {
-            slidesPerView: 4,
-          },
+          0: { slidesPerView: 1 },
+          640: { slidesPerView: 2 },
+          768: { slidesPerView: 3 },
+          1024: { slidesPerView: 4 },
         }}
         className="mt-4"
       >
