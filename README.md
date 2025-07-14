@@ -2,6 +2,8 @@
 
 A personal project: a modern, responsive product listing web app built with **React**, **Vite**, and **Tailwind CSS**. Products are displayed in a carousel with color selection, ratings, and custom fonts.
 
+https://product-listing-ruby.vercel.app/
+
 ---
 
 ## ✨ Features
